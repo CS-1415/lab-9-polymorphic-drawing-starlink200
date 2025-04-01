@@ -23,7 +23,10 @@ public class Circle : AbstractGraphic2D
 
     public override bool ContainsPoint(decimal x, decimal y)
     {
-        if(x >= LowerBoundX && x <= UpperBoundX && y >= LowerBoundY && y <= UpperBoundY)
+        //basically use pythagorean equation to ensure that the points fall within the circle
+        decimal xLine = (x - CenterX)*(x - CenterX);
+        decimal yLine = (y - CenterY)*(y - CenterY);
+        if(xLine + yLine <= Radius * Radius)
         {
             return true;
         }
