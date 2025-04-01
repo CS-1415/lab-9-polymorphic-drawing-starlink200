@@ -36,9 +36,10 @@ Since we cannot include data in the shared interface, inheriting from a abstract
 Now, consider the following main driver that uses the library (if you are unfamiliar with the initialization block following a constructor call, just imagine the code in the curly braces after each constructor call as if it were being run in the constructor, however, note that you can only initialize public members in this way).
 
 Lab09.Main/SampleDrawing.cs
-using Lab08;
+using Lab09;
 
-List<IGraphic2D> shapes = new List<IGraphic2D> {
+List<IGraphic2D> shapes = new List<IGraphic2D>
+{
     new Circle(10, 10, 5) { BackgroundColor = ConsoleColor.DarkYellow, DisplayChar = ' ' },
     new Circle(8, 10, 1m) { BackgroundColor = ConsoleColor.White, ForegroundColor = ConsoleColor.Gray, DisplayChar = '.' },
     new Circle(12, 10, 1m) { BackgroundColor = ConsoleColor.White, ForegroundColor = ConsoleColor.Gray, DisplayChar = '.' },
@@ -59,7 +60,7 @@ To understand how the library should work, read the following tests that will ne
 Lab09.Tests/CircleTests.cs
 using NUnit.Framework;
 
-namespace Lab08.Tests;
+namespace Lab09.Tests;
 
 public class CircleTests
 {
@@ -121,7 +122,7 @@ public class CircleTests
 Lab09.Tests/RectangleTests.cs
 using NUnit.Framework;
 
-namespace Lab08.Tests;
+namespace Lab09.Tests;
 
 public class RectangleTests
 {
@@ -214,7 +215,7 @@ The sample test should run and pass:
 dotnet test
 Step 4: Read and Add the Starter Code to the Appropriate Files
 Lab08/IGraphic2D.cs
-namespace Lab08;
+namespace Lab09;
 
 // Represents a graphical element (i.e. a shape) that can be printed to the
 // console.
@@ -227,7 +228,7 @@ public interface IGraphic2D
 }
 
 Lab09/AbstractGraphic2D.cs
-namespace Lab08;
+namespace Lab09;
 
 // Implements the display char and color properties.
 public abstract class AbstractGraphic2D : IGraphic2D
@@ -306,7 +307,7 @@ Step 5: Create Stubs for Circle and Rectangle Classes
 Put each in its own .cs file. Here is an example for Circle
 
 Lab09/Circle.cs
-namespace Lab08;
+namespace Lab09;
 
 public class Circle : AbstractGraphic2D
 {
