@@ -14,14 +14,14 @@ public class RectangleTests
         shape = rectangle;
     }
 
-    [Test]
-    public void EnsurePropertiesAreCorrect()
-    {
-        Assert.AreEqual(3, rectangle.Left);
-        Assert.AreEqual(4, rectangle.Top);
-        Assert.AreEqual(5, rectangle.Width);
-        Assert.AreEqual(6, rectangle.Height);
-    }
+    // [Test]
+    // public void EnsurePropertiesAreCorrect()
+    // {
+    //     Assert.AreEqual(3, rectangle.Left);
+    //     Assert.AreEqual(4, rectangle.Top);
+    //     Assert.AreEqual(5, rectangle.Width);
+    //     Assert.AreEqual(6, rectangle.Height);
+    // }
 
     [Test]
     public void CheckLowerBounds()

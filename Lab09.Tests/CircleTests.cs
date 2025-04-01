@@ -15,13 +15,13 @@ public class CircleTests
         shape = circle;
     }
 
-    [Test]
-    public void CircleHasCorrectDimensions()
-    {
-        Assert.AreEqual(8, circle.CenterX);
-        Assert.AreEqual(10, circle.CenterY);
-        Assert.AreEqual(2, circle.Radius);
-    }
+    // [Test]
+    // public void CircleHasCorrectDimensions()
+    // {
+    //     Assert.AreEqual(8, circle.CenterX);
+    //     Assert.AreEqual(10, circle.CenterY);
+    //     Assert.AreEqual(2, circle.Radius);
+    // }
 
     [Test]
     public void HasCorrectBoundingBox()

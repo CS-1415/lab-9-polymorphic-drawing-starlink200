@@ -1,6 +1,6 @@
-namespace Lab09;
+using Lab09;
 
-public class Circle : AbstractGraphic2D
+public class Rectangle : AbstractGraphic2D
 {
     public override decimal LowerBoundX => -1;
 
@@ -10,9 +10,9 @@ public class Circle : AbstractGraphic2D
 
     public override decimal UpperBoundY => -1;
 
-    public Circle(int x, int y, decimal r)
+    public Rectangle(int i, int j, int k, decimal l)
     {
-
+        
     }
 
     public override bool ContainsPoint(decimal x, decimal y)
